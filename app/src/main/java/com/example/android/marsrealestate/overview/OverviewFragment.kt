@@ -24,6 +24,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.android.marsrealestate.R
 import com.example.android.marsrealestate.databinding.FragmentOverviewBinding
 
+
 /**
  * This fragment shows the the status of the Mars real-estate web services transaction.
  */
@@ -46,6 +47,7 @@ class OverviewFragment : Fragment() {
 
         // Allows Data Binding to Observe LiveData with the lifecycle of this Fragment
         binding.lifecycleOwner = this
+        binding.photosGrid.adapter = PhotoGridAdapter()
 
         // Giving the binding access to the OverviewViewModel
         binding.viewModel = viewModel
